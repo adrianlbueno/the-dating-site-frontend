@@ -1,6 +1,7 @@
 import {Button} from "../common/Button.jsx";
 
 const RegistrationForm = ({handleSubmit, onSubmit, errors, register, error}) => {
+
     return (
         <form
             className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"

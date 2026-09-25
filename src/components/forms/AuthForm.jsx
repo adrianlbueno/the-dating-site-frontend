@@ -53,7 +53,7 @@ const AuthForm = ({isLogin = false}) => {
 
     return (
         <div className="w-full max-w-xs">
-            {isLogin ? <RegistrationForm/> : <SignInForm/>}
+            {!isLogin ? <RegistrationForm  handleSubmit={handleSubmit} onSubmit={onSubmit} errors={errors} register = {register} error={error} /> : <SignInForm/>}
         </div>
     );
 };

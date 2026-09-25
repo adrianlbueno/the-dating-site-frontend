@@ -1,10 +1,14 @@
 import {useForm} from "react-hook-form";
 import {useState} from "react";
-import {faEye} from "@fortawesome/free-solid-svg-icons";
+import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const eyeIcon = <FontAwesomeIcon icon={faEye}/>;
+
+
+const closedEyeIcon = <FontAwesomeIcon icon={faEyeSlash}/>;
 const SignInForm = () => {
+
     const {register, formState: {errors}} = useForm();
     const [passwordShown, setPasswordShown] = useState(false);
     const togglePasswordVisibility = () => {
@@ -37,7 +41,7 @@ const SignInForm = () => {
                             {...register("Password", {required: true})}
                         />
                         <i className="absolute right-0 top-0 mt-2 mr-3"
-                           onClick={togglePasswordVisibility}>{eyeIcon}</i>
+                           onClick={togglePasswordVisibility}>{ passwordShown ? closedEyeIcon : eyeIcon  }</i>
                     </div>
                 </label>
                 {errors.password && <span className="text-red-500">Password is required</span>}
