@@ -5,7 +5,7 @@ import thirdUserImage from "/src/assets/images/nadjim.jpg"
 
 const AboutUs = () => {
     return (
-            <div className="mainCtn about bg-gray-100 py-10 px-5">
+            <div className="flex justify-center items-center mainCtn h-screen about bg-gray-100 py-10 px-5">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-4xl font-bold text-center text-gray-800 mb-6">
                         Dogs bring us together
